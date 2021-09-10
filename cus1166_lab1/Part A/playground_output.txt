@@ -1,0 +1,45 @@
+Hello World
+
+Practicing Variables
+Variable myVar : 1 is an <class 'int'>
+
+Practicing with Python User Input
+What is your name? Hello Elson
+
+Practicing with variable initialization
+Value of variable i: 120
+Variable f has a value of 1.6180339 and is of type <class 'float'>
+Value of variable b: True
+Value of variable n: None
+c[0] has a value of 10 and c is of type: <class 'tuple'>
+
+Collections
+l[0] has the value of 10 and l is of type <class 'list'>
+{1, 4, 6}
+
+Conditional Statements
+X is positive
+
+Loops
+0
+1
+2
+3
+4
+0 - 2
+1 - 3
+2 - 4
+3 - 5
+4 - 6
+5 - 7
+6 - 8
+7 - 9
+
+Functions
+Sample array: 
+11 34 73
+11 is odd
+34 is even
+73 is odd
+
+Classes
