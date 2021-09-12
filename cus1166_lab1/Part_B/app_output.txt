@@ -1,0 +1,13 @@
+How many students are in this roster? Please enter information for 10 students
+Enter Student 1's Name: Enter Student 1's Grade: Enter Student 2's Name: Enter Student 2's Grade: Enter Student 3's Name: Enter Student 3's Grade: Enter Student 4's Name: Enter Student 4's Grade: Enter Student 5's Name: Enter Student 5's Grade: Enter Student 6's Name: Enter Student 6's Grade: Enter Student 7's Name: Enter Student 7's Grade: Enter Student 8's Name: Enter Student 8's Grade: Enter Student 9's Name: Enter Student 9's Grade: Enter Student 10's Name: Enter Student 10's Grade: 
+Student: Abel, Grade: 87
+Student: Bonnie, Grade: 75
+Student: Charlie, Grade: 93
+Student: Diego, Grade: 89
+Student: Eve, Grade: 98
+Student: Drake, Grade: 67
+Student: Irina, Grade: 77
+Student: Adrianne, Grade: 72
+Student: Ronald, Grade: 64
+Student: Merie, Grade: 94
+The average grade for the roster: 81.60
