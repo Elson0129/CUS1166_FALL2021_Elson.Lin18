@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Roster Information</title>
+  </head>
+
+  <body>
+    {% if grade_view==0 %}
+      <h1 style="font-size: 45px; text-align: center; text-decoration: underline;">Displaying <b>ALL</b> student information</h1>
+      <div class="student-info-container" style="width 100%;">
+        <ul class="student-info-list" style="list-style: none; text-align: center;">
+          {% for student in roster %}
+            <li style="margin-bottom: 15px;">
+              <h3><b>{{student[0]}}</b> is currently a <u>{{student[2]}}</u> and has a grade of: <span style="color: red">{{student[1]}}</span></h3>
+            </li>
+          {% endfor %}
+        <ul>
+      </div>
+    {% endif %}
+    {% if grade_view==1 %}
+      <h1 style="font-size: 45px; text-align: center; text-decoration: underline;">Displaying <b>ONLY</b> student name and student grade</h1>
+      <div class="student-info-container" style="width 100%;">
+        <ul class="student-info-list" style="list-style: none; text-align: center;">
+          {% for student in roster %}
+            <li style="margin-bottom: 15px;">
+              <h3><b>{{student[0]}}</b> currently has a grade of: <span style="color: red">{{student[1]}}</span></h3>
+            </li>
+          {% endfor %}
+        <ul>
+      </div>
+    {% endif %}
+    {% if grade_view==2 %}
+      <h1 style="font-size: 45px; text-align: center; text-decoration: underline;">Displaying <b>ONLY</b> student name and student grade standing</h1>
+      <div class="student-info-container" style="width 100%;">
+        <ul class="student-info-list" style="list-style: none; text-align: center;">
+          {% for student in roster %}
+            <li style="margin-bottom: 15px;">
+              <h3><b>{{student[0]}}</b> is currently a <u>{{student[2]}}</u></h3>
+            </li>
+          {% endfor %}
+        <ul>
+      </div>
+    {% endif %}
+  </body>
+</html>

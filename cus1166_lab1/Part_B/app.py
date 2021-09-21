@@ -15,6 +15,7 @@ def main():
 
     for student in roster:
         student.print_student_info();
+
     print("The average grade for the roster: {:.2f}".format(average_grade(roster)))
 
 main()
