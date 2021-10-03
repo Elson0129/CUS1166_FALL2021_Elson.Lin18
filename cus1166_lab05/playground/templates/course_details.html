@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css", rel="stylesheet">
+    <title>Student Registration</title>
+  </head>
+  {% block body %}
+  <body>
+    <div class="container-fluid">
+      <div class="mt-1">
+        <h3>Course Registration For {{course.course_number}}: {{course.course_title}}</h3>
+        <h4>Registered Students:</h4>
+        <ul>
+          {% for student in registered_students %}
+            <li>Student Name: <b>{{student.name}}</b>, Grade: <span style="color:red">{{student.grade}}</span></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="mt-1 student-registration-form">
+        <h3>Register</h3>
+        <form action="{{url_for('register_student', course_id=course.id)}}" method="post">
+          <input type="text" name="name" placeholder="Student Name">
+          <input type="text" name="grade" placeholder="Student Grade">
+          <button type="submit">Register Student</button>
+      </div>
+
+      <h3 style="text-decoration: underline;"><a style="color: #000;" href="{{url_for('index')}}">Return to Course List Page</a></h3>
+    </div>
+  </body>
+  {% endblock %}
+</html>
