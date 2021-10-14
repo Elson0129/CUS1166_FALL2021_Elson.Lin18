@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Sign-In</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="container">
+    {% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+  </div>
+  <div class="col-md-4"></div>
+    <div class="container content-section col-md-4">
+      <h1 class="mt-4">Sign In</h1>
+      <form action="{{url_for('sign_in')}}" method="post">
+          <div class="form-group">
+              <label for="name" class="form-control-label">Email:</label>
+              <input class='form-control-lg form-control' type="email" name="email" id="" required>
+          </div>
+
+          <div>
+              <label width="100" for="name" class="form-control-label">Password:</label>
+              <input class='form-control-lg form-control' type="password" name="password" id="" required>
+          </div>
+          <div class="form-group">
+              <input style="margin-top: 10px;" type="submit" class="btn btn-outline-info" value="Sign In">
+          </div>
+          <div>Don't have an account? Register <a href="/sign_up">here</a></div>
+      </form>
+    </div>
+  </body>
+</html>

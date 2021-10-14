@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>{{current_user.name}}'s Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="container-fluid">
+    {% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+  </div>
+    <div class="container dashboard-content-container">
+      <h1 style="font-size: 50px; text-align: center;">Welcome, {{current_user.name}}!</h1>
+      <h3><a href={{url_for('sign_out')}}>Sign Out</a></h3>
+    </div>
+  </body>
+</html>
